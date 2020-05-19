@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import ChatView from '../views/ChatView.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,12 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/chat',
+    name: 'Chat',
+    component: ChatView,
+    props: true
   }
 ]
 
