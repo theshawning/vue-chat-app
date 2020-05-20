@@ -1,6 +1,6 @@
 <template>
   <div class="chatView">
-    <Chat />
+    <Chat :name='name' />
   </div>
 </template>
 
@@ -9,6 +9,7 @@ import Chat from '@/components/Chat.vue'
 
 export default {
   name: 'ChatView',
+  props: ['name'],
   components: {
     Chat
   }

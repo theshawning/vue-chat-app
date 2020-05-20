@@ -15,7 +15,14 @@ Vue.use(VueRouter)
     path: '/chat',
     name: 'Chat',
     component: ChatView,
-    props: true
+    props: true,
+    beforeEnter: (to, from, next) => {
+      if(to.params.name){
+        next()
+      } else {
+        next({ name: 'Home' })
+      }
+    }
   }
 ]
 
